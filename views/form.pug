@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Create New Message
+
+  form(method='POST' action='/new')
+
+    input(
+      type='text'
+      name= 'author'
+      placeholder='Enter your name...'
+    )
+    p
+    textarea(
+      name='message'
+      rows='5'
+      cols='20'
+      placeholder='Enter your message...'
+    )
+    p
+    button(type='submit' name='submit') SUBMIT
